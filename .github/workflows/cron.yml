@@ -3,7 +3,7 @@ name: Sito Cron
 
 on:
   schedule:
-    - cron: "*/10 * * * *"
+    - cron: "*/15 * * * *"
 
 jobs:
   update:
