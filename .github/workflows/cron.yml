@@ -2,10 +2,8 @@ name: Sito Cron
 
 
 on:
-  push:
-  workflow_dispatch:
   schedule:
-    - cron: "*/5 * * * *"
+    - cron: "*/10 * * * *"
 
 jobs:
   update:
