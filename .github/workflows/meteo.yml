@@ -1,0 +1,18 @@
+name: Meteo Cron
+
+on:
+  schedule:
+    - cron: "* * * * *"   # ogni minuto
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Call update.php
+        run: curl -A "Mozilla/5.0" "https://cdameteo.altervista.org/update.php?PASS=TUAPASSWORD"
+
+  crop:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Call crop_delete.php
+        run: curl -A "Mozilla/5.0" "https://cdameteo.altervista.org/crop_delete.php"
